@@ -1,21 +1,153 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="card l">
+  <h1>Pipes texto</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Uppercase</td>
+      <td>{{texto}}</td>
+      <td>{{texto | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>Lowercase</td>
+      <td>{{texto}}</td>
+      <td>{{texto | lowercase}}</td>
+    </tr>
+    <tr>
+      <td>Titlecase</td>
+      <td>{{texto}}</td>
+      <td>{{texto | titlecase}}</td>
+    </tr>
+  </table>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<div class="card l">
+  <h1>Pipe slice</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>slice</td>
+      <td>{{id}}</td>
+      <td>{{id | slice:-3}}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe date</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td>{{fecha}}</td>
+      <td>{{fecha | date: "dd/MM/yyyy hh:mm"}}</td>
+    </tr>
+    <tr>
+      <td>date <i>long</i></td>
+      <td>{{fecha}}</td>
+      <td>{{fecha | date: "long"}}</td>
+    </tr>
+    <tr>
+      <td>date <i>medium</i></td>
+      <td>{{fecha}}</td>
+      <td>{{fecha | date: "medium"}}</td>
+    </tr>
+    <tr>
+      <td>date <i>short</i></td>
+      <td>{{fecha}}</td>
+      <td>{{fecha | date: "short"}}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe decimal</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Dos decimales</td>
+      <td>{{importe}}</td>
+      <td>{{importe | number: '4.2-2' }}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe percent</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Porcentual con dos decimales</td>
+      <td>{{aciertos}}</td>
+      <td>{{aciertos | percent:'2.2-2' }}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe currency</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Moneda euro</td>
+      <td>{{importe}}</td>
+      <td>{{importe | currency:'EUR':true }}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe json</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Objeto</td>
+      <td>{{actor}}</td>
+      <td>{{actor | json }}</td>
+    </tr>
+  </table>
+</div>
+<div class="card l">
+  <h1>Pipe propio</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor</th>
+      <th>Resultado</th>
+    </tr>
+    <tr>
+      <td>Redondeo y moneda</td>
+      <td>{{cantidad}}</td>
+      <td>{{cantidad | numero: valor:' €' }} <button class="mini" (click)="redondeo(1)">+</button><button class="mini" (click)="redondeo(-1)">-</button></td>
+    </tr>
+  </table>
+</div>
